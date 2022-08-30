@@ -1,0 +1,12 @@
+celery==5.1.2
+Django==3.2.7
+django-celery-beat==2.2.1
+django-celery-results==2.2.0
+django-environ==0.7.0
+django-timezone-field==4.2.1
+djangorestframework==3.12.4
+djangorestframework-simplejwt==4.8.0
+pytest==6.2.5
+pytest-django==4.4.0
+psycopg2-binary
+timedelta==2020.12.3

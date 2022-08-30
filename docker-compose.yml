@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    command: 'python manage.py runserver 0.0.0.0:8000'
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    image: postgres:14.0-alpine
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
